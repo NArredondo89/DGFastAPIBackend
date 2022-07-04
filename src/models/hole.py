@@ -1,4 +1,5 @@
-from sqlalchemy import Column, String, Timestamp
+from sqlalchemy import Column, String, TIMESTAMP
+
 from database import Base 
 
 
@@ -13,4 +14,5 @@ class Hole(Base):
   out_of_bounds = Column(String(45))
   hazzard = Column(String(45))
   drop_zone= Column(String(45))
+  date_created= Column(TIMESTAMP)
   

@@ -1,5 +1,5 @@
+from sqlalchemy import Column, String, TIMESTAMP
 
-from sqlalchemy import Column, String, Timestamp
 from database import Base 
 
 
@@ -9,4 +9,5 @@ class PlayDate(Base):
   comment = Column(String(45))
   date = Column(String(45))
   time = Column(String(45))
+  date_created= Column(TIMESTAMP)
 

@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Timestamp
+from sqlalchemy import Column, String, TIMESTAMP
 from database import Base 
 
 
@@ -17,5 +17,6 @@ class Event(Base):
   day_of_week = Column(String(45))
   start_format = Column(String(45))
   play_format = Column(String(45))
+  date_created= Column(TIMESTAMP)
   
   

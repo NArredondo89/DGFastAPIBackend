@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Timestamp
+from sqlalchemy import Column, String, TIMESTAMP
 from database import Base 
 
 
@@ -26,3 +26,4 @@ class Course(Base):
   basket_types: Column(String(45))
   tee_types: Column(String(45))
   fees: Column(String(45))
+  date_created= Column(TIMESTAMP)
