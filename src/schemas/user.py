@@ -1,13 +1,13 @@
 from pydantic import BaseModel, Field
-from typing import Optional 
+from typing import Optional
+import datetime
 
 
 class User(BaseModel):
   user_id: str 
   email: str
   password: str
-  sign_up_date : str
-  location: str
+  sign_up_date : datetime.datetime
   home_course: str
   slogan: str
 
@@ -17,7 +17,7 @@ class User(BaseModel):
 class CreateUser(BaseModel):
   email: str
   password: str
-  sign_up_date : str
+  sign_up_date : datetime.datetime = datetime.datetime.now()
   location: str
   home_course: str
   slogan: str
@@ -41,3 +41,7 @@ class UserCredentials:
   password: Optional[str]
   class Config:
     orm_mode = True
+
+
+class ReturnUser(User):
+  course_name: str

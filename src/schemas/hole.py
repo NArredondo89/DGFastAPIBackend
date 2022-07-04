@@ -12,6 +12,8 @@ class Hole(BaseModel):
   out_of_bounds:str
   hazzard:str
   drop_zone:str
+  date_created: datetime.datetime
+  
   class Config:
     orm_mode = True
 
@@ -24,6 +26,8 @@ class CreateHole(BaseModel):
   out_of_bounds:str
   hazzard:str
   drop_zone:str
+  date_created: datetime.datetime = datetime.datetime.now()
+  
 
   class Config:
     orm_mode = True

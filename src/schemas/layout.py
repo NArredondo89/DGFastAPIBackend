@@ -12,6 +12,8 @@ class Layout(BaseModel):
   layout_information: str
   hazzard: str
   out_of_bounds: str
+  date_created: datetime.datetime
+  
 
   class Config:
     orm_mode = True
@@ -24,6 +26,8 @@ class CreateLayout(BaseModel):
   layout_information: str
   hazzard: str
   out_of_bounds: str
+  date_created: datetime.datetime = datetime.datetime.now()
+  
 
   class Config:
     orm_mode = True

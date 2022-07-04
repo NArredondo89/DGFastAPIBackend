@@ -17,6 +17,8 @@ class Event(BaseModel):
   day_of_week:str
   start_format:str
   play_format:str
+  date_created: datetime.datetime
+  
   
   class Config:
     orm_mode = True
@@ -34,6 +36,8 @@ class CreateEvent(BaseModel):
   day_of_week:str
   start_format:str
   play_format:str
+  date_created: datetime.datetime = datetime.datetime.now()
+  
 
   class Config:
     orm_mode = True

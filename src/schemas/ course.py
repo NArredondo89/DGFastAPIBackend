@@ -26,6 +26,8 @@ class Course(BaseModel):
   basket_type: str
   tee_type: str
   fee: str
+  date_created: datetime.datetime
+  
   
   
   class Config:
@@ -53,6 +55,8 @@ class CreateCourse(BaseModel):
   basket_type: str
   tee_type: str
   fee: str
+  date_created: datetime.datetime = datetime.datetime.now()
+  
 
   class Config:
     orm_mode = True

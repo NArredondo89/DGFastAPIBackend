@@ -8,6 +8,8 @@ class Route(BaseModel):
   title: str
   content: str
   video: str
+  date_created: datetime.datetime
+  
   class Config:
     orm_mode = True
 
@@ -15,6 +17,8 @@ class CreateRoute(BaseModel):
   title: str
   content: str
   video: str
+  date_created: datetime.datetime = datetime.datetime.now()
+  
   class Config:
     orm_mode = True
 
