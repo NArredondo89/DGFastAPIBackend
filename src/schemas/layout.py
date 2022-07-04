@@ -13,4 +13,30 @@ class Layout(BaseModel):
   hazzard: str
   out_of_bounds: str
 
+  class Config:
+    orm_mode = True
 
+class CreateLayout(BaseModel):
+  layout_title: str
+  total_holes: str
+  total_par: str
+  total_feet: str
+  layout_information: str
+  hazzard: str
+  out_of_bounds: str
+
+  class Config:
+    orm_mode = True
+
+
+class UpdateLayout(BaseModel):
+  layout_title: Optional[str] = Field(defaults="")
+  total_holes: Optional[str] = Field(defaults="")
+  total_par: Optional[str] = Field(defaults="")
+  commtotal_feetent: Optional[str] = Field(defaults="")
+  layout_information: Optional[str] = Field(defaults="")
+  hazzard: Optional[str] = Field(defaults="")
+  out_of_bounds: Optional[str] = Field(defaults="")
+
+  class Config:
+    orm_mode = True
